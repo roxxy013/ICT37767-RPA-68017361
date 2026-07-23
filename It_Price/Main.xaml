@@ -1,0 +1,403 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.Activities.System.Orchestrator.Mail</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="681.2,4449.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd2:DataTable" Name="dt_Report" />
+      <Variable x:TypeArguments="x:String" Name="Price_Ihavecpu" />
+      <Variable x:TypeArguments="x:String" Name="Price_Advice" />
+      <Variable x:TypeArguments="x:String" Name="Price_Jib" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="520,3332" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome M.2 (เอสเอสดี) WD BLACK SN7100 1TB PCI" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1199.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="d1637b2c-4a66-43c1-97a4-6b20b175d49c" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,996" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;กำลังดึงข้อมูล WD BLACK จาก IHAVECPU&quot;]" />
+              <uix:NGetText DisplayName="Get Text '฿6,490.00'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="d1637b2c-4a66-43c1-97a4-6b20b175d49c" TextString="[Price_Ihavecpu]" Version="V5">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="ihavecpu.com/product/36738/m.2-(%E0%B9%80%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%AD%E0%B8%AA%E0%B8%94%E0%B8%B5)-wd-black-sn7100-1tb-pcie-nvme-gen4-(wds100t4x0e)-(5y)" ContentHash="uxUxmX3c40SxIzAwShOjOw" DesignTimeRectangle="1123, 660, 161, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='DIV' type='' class='sc-96a18268-0 johkdI' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="f010d1e5-b9c5-49cf-a897-08616e59dc56" InformativeScreenshot="eb22895709d7bb6e235b11db29066ced.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/wbeEEH5Li066wKKHcZ-oeA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='M.2 (เอสเอสดี) WD BLACK SN7100 1TB PCIe/NVMe GEN4 (WDS100T4X0E) (5Y)' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Price_Ihavecpu]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Price_Ihavecpu.Replace("฿","").Replace(",","").Trim()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <If Condition="[String.IsNullOrEmpty(Price_Ihavecpu) Or Price_Ihavecpu = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="451.2,444.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Price_Ihavecpu]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["สินค้าหมด"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" ContentHash="-39JbtkvI06rBzbZeZv8dw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABVBJREFUWEfNl1tsVEUYx0/FqEHUAtvu7rnPaYwaxEsUiZeASqyXqGhAjEbxErVGQyAa45WgkggvmhhfSNDwpBJUCIgSedkIey5ba0tUoonXeGmNiQ9eAwGK//+cmXZ2u1vZ2Af/yS893zdzZr6Z+eY7W+t/ocwNlmR+NJR44dUwXwIfg1PZBj0HhkBZWrk2gkEQSivXWkBfl7QsayHge7eBFerZ5AKQK/HDvszvOZp64a0wt4EjYCbboE3gKAikZVnHgV8AfUvpUHoM0NcrLct6CtC+AqxTzwnYpZgLcrUZAP+ynb4X6FBaBOh7QlqW9TY4DGYDHcB8MFGVUhhmXrg4cV0H5r8FcBOgTbgSrQLghFukZVlfK6jJA9hTCMqJGy4cLJV4fjqACDCI14EZwPOA9gEwAjqA1jfgS8BVMxjuAqUDuApwTJ1fuZocwShgEITPZgA7wUGwFbDdA1rvgEOAucF3mAeUDkCPySQfV4sceAT0sRnoALjaH8F+sArQfyPQehrQxyD59xpA6QDWA465BIyrjSS0Ads2A15Z+tcArWsBfdwF9isBavIcaCOA69Qz23nGfN4OtFgr2Eb/D0Dnx5QF8Ix6fhGsBJzke6An0kfEPjvoUJqyAHSS6bY3APsWpZXrXcD+rKBaOoBvweeKeSBX5onezIu27bX9y2CykHCiGWyDWEYZFK/oK+BVoHULYNscaeVaDujjWFp3APpMzHewC647t4ZvQSOZLXrRNot9KrZdaNaH8DsygHrCfh8Uiydrf39XqBPRiovFbhY8UnMc1opcaTk4K/WiAX6QsBMjPA4TtH2K/evggI1tdXjR8IBtT//IFmdonzpWKfN9Fj7lHj8Ckjr+Mk4IfoX9dz5IzyEEMK0+gOg39snp+QN9R8GRuCyCKgPI7dGqPR4Adwm+P1M3iusC0EkoJ8N3gb5n8dVDx/VNA8DAmGgB+5BqyZ+TOuGDpNLVNaPS2dmp7bjb65GTQB/Osr2kHNxcO8WZndr+pcqNs3H8pbEjHsXAfw1iBcptpY5Yy8mwygP4wkxTKziIM9ywHxOpbnUL4PutjiB1w/mZKxKMsTuxg/OVmwkY3I7Gx3EUNTOApORelDjhqswOHmIOcDWZtMN7zC2cNADjCOKidzYm30R4TMptDIBENLOzVgwEJ4o9sYA2grwcZz9MYie4WHaCWgbgin1ISn6mpVomYeMAyj1B2LZLEOQ+Sdkf+0nVLAAc21fofy+Ojb8fpP5zAK0GwDE9YL5fwd3PyuJO7NTvx3QNE8dfhFW9Scwta1RciubhRlQySZTxWeKIzdjuIaz6MK8hx0D7z7TRtky9rq/7Z3j/p7oAUlvcoAfLurvNul4nHQCu51Yk5sOcQK4ov/MDmRvtHLDs6ZnjuGjbTcyJqmXvwvxmicoxHQF/qtUccS5Wdw5tcwtTV9yP27CYt0fTj51kv7YrYasAsKJ1+SATK2HdAA1qO4DYC+/Gdsmy2m/bY7/xsFWra17Uj+0daSeAvaf5M9G+kmRd7unKbSE3fO2vFjz+usrF64UtfZl8gpeVm8l5PXwr8LePlXDKdgAV1yzRdUeA7U7HEtKPvpM+N3of3TpQfK7UO1VXyxskA0Bioga8hgVsTHCUBL4NmS8SfH3vY5FT3bHVSCa+oIOYgCeG+dGRldGJniTmUTVqT6FQRuK+lThiOfLovdQTu0xqbvRFYodnqu7qy+eEd2GlaxphHsROeB77cdu0n/ddvtxCeS0Qq82xNFyw6parYlnHc0DegGbo2lCxwpO0D//+nChfbiH843AC64E5jobJmPeyrH8AoUNj2ArTlCQAAAAASUVORK5CYII=" InformativeScreenshot="599c756cd5867fb9ce6bd088e0bf04be.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/sPEAXD0_80-auXCiTs000A" Selector="&lt;html app='chrome.exe' title='M.2 (เอสเอสดี) WD BLACK SN7100 1TB PCIe/NVMe GEN4 (WDS100T4X0E) (5Y)' /&gt;" Url="https://ihavecpu.com/product/36738/m.2-(เอสเอสดี)-wd-black-sn7100-1tb-pcie-nvme-gen4-(wds100t4x0e)-(5y)" Version="V3">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 1 TB SSD (เอสเอสดี) WD BLACK SN7100 -" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1024.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="eb6c6581-d870-4536-b0a8-6c904dea2455" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,821.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="Get Text '6,390'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="eb6c6581-d870-4536-b0a8-6c904dea2455" TextString="[Price_Jib]" Version="V5">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="jib.co.th/web/product/readProduct/0000074479" ContentHash="c13HEiEqdEu-6bjFjDlweg" DesignTimeRectangle="1410, 502, 143, 60" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl isleaf='1' tag='STRONG' /&gt;" Guid="3cbc6d78-3e57-4dad-9f60-01c4633d2f46" InformativeScreenshot="40e6c070077d96497db5a1a8b11f11f4.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/yxptcFnt4UaAXO2reoDRWw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='1 TB SSD (เอสเอสดี) WD BLACK SN7100 - PCIe 4x4 NVMe M.2 2280 (WDS100T4X0E)' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Price_Jib]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Price_Jib.Replace("฿","").Replace(",","").Trim()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <If Condition="[String.IsNullOrEmpty(Price_Jib) Or Price_Jib = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="451.2,444.8" sap2010:WorkflowViewState.IdRef="If_2">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Price_Jib]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["สินค้าหมด"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" ContentHash="yCWV6LpcGEObr1N-j2Q3MA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHXSURBVGhD7ZaxS8NAFIf9L9wdXFwEnQURcXDoLHbpJOhcHB3EwVGlm4iTkxTnipuILo7FVXRz6uCiwsmv5oWXa9K8i4cvxffgo/TyLrnv7t4lU7MzLTfJmIA2JqCNCWhjAtqYgDYmoM3/FGhuHGZYXmqn1xbmmm5ztZHC+zXW90b6gsX5nUxeCEECeFC//+z8eLh/SnMw6M/udAqXQF5R4L6QoVwpQQLnZ73kcdmIIUCxvXWc5ksIEthtn7qTo6shry9vySPzBb5uVpz7GGRmVSKA+1K+hMpFzAfjC9x11txg8D68ViSA1UQb6qd7eZu0/gTlS4gugCLm14oEsIrUjhwe1C4hugBmlEeZAPL5wYAtFHIqRRfwZ7NM4GD/YuRkw3/qU4a6AIEDggfvN47aCAAqfETe9TyiCOAUoXapAJ1CAHXgv2P+dAX4bPkCvCB5n3GBlZAWcmUBHkUC173HTB+pQMjbuJKAf1TmCWBb+bNYJgBhfPDxPmVUEsCAefD9ikEXLT/Ekesj3S55BAvgYfy0CP12iU2QAAbPXzoQCV3y2IgF6jh4IBLAQGnb4Bc18Jt9GxPxCqDY6jDjPsFFXDdMQBsT0MYEtDEBbUxAGxPQZsIFWu4boKbmMjtvaqYAAAAASUVORK5CYII=" InformativeScreenshot="484d404c8f524eb1421002b18f09a598.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/YAy2wTPkCU2h-gS5bndzWw" Selector="&lt;html app='chrome.exe' title='1 TB SSD (เอสเอสดี) WD BLACK SN7100 - PCIe 4x4 NVMe M.2 2280 (WDS100T4X0E)' /&gt;" Url="https://www.jib.co.th/web/product/readProduct/0000074479" Version="V3">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome SSD WD BLACK SN7100 1TB PCIe 4.0 NVMe" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1016" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="0d59eae7-e82f-4a50-93df-481b8234f851" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,821.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="Get Text '฿6,200'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,142.4" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="0d59eae7-e82f-4a50-93df-481b8234f851" TextString="[Price_Advice]" Version="V5">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="advice.co.th/product/ssd-solid-state-drive-/ssd-m-2-pcie-nvme-1-tb/1-tb-ssd-m-2-pcie-4-0-wd-black-sn7100-wds100t4x0e-nvme-m-2-2280" ContentHash="m8TwaoGgb0yt5DXI24wkTg" DesignTimeRectangle="912, 608, 434, 69" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='__nuxt' tag='DIV' type='' class='item-price col px-0 text-end' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' /&gt;" Guid="88d9281d-2d1c-43b2-af9c-b942c869ea94" InformativeScreenshot="da5336aa6a5ef8a5816b2bbe71b6443f.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/6UPQEq0hY0uPHGdK4-f7Gg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SSD WD BLACK SN7100 1TB PCIe 4.0 NVMe M.2 เร็วแรง! อัปเกรดคอมฯ ให้สุดคุ้ม' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="742, 626, 170, 34" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='ราคาเฉพาะออนไลน์' parentid='__nuxt' tag='DIV' type='' class='item-text col-auto px-0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='ราคาเฉพาะออนไลน์' /&gt;" Guid="dd3f274c-2f7e-44d1-9e61-7ab079d8edd5" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Price_Advice]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Price_Advice.Replace("฿","").Replace(",","").Trim()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <If Condition="[String.IsNullOrEmpty(Price_Advice) Or Price_Advice = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="451.2,444.8" sap2010:WorkflowViewState.IdRef="If_3">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Price_Advice]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["สินค้าหมด"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1218" BrowserType="Chrome" ContentHash="BhNQcwTiGkyJ_gcRoKi5xw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJLSURBVDhPbdPdS9NRHMfx84ecPUHCiC7yQqigOfBig2JGtf6BLsJchWSBYGy0kDJkRZTrJqlgaFhdrOwJ9ltaS/vpxLVhabl8qLkH96xuFft0zu/n5qbbza5ee3/P95wR/jlpEfSt7YJwpN1bMpwfQ0uHD82dEzh0eRJNXdPY3z2DfdYQtPZZNPTMQXPjh6joWzBJ+Hibx3TsrAdHLe9hlPBH6C5yLFbhILRXZ7GnZ55jKPt+gt5eAu1f1hNWFjmuLdfDrNzLcVjGd1dAnRGBbJd90HWOV3Bjd0Aeu6bM8aKM7/8GHVgtEeOF3WM3XtnGDRyzsqq6zPGDVdDHcRC5XD02w7ZyWVpY7dgVHAMdSoA0b5Vbe0M4cedbZdu2tzEJq9jC9jpXcOBRpKZMBxOgz5Ig5fKn+RzsLyOwDC1j4HMKD/0ZtLljOO2OwzAYxZl3KXSMZnCKf4/n4AoXQF+kQZq6/LA+XcLrYBrD0xn0+5I47FyEzZvEtbEUHGIWxuE4znkzsE7mpbGn1v7h1hz7gTdZEH5V119FoHN8h2M0gUsjMbgCWRhcEZifx3DQFYV5JIkWdxJPWNXgycIW2oRZXIdCyIOUz7zrkdRZGD8zdaelMseKDxsgWvtX+arq4qiMtxZWi9ehmtgEYW+7JG+7/j1XMFuYhD15KBlWMqz2F0E0NxcEfs+K6hdWHntn2ZNjeEMqq6eK0MwURUIdYX39M68xnKqUaVVZxcrqwB9oggX5H6m498vEsFhbZnjHmWVcKDEsqL/81RNCyH+v4Z8e4G8MlgAAAABJRU5ErkJggg==" InformativeScreenshot="f6a29d741b4826941b0a921b9181bef2.jpg" Reference="0bIpDey5mUGmAGrVYo6OGA/BNK5M1ljDEKovG34_qRxxw" Selector="&lt;html app='chrome.exe' title='SSD WD BLACK SN7100 1TB PCIe 4.0 NVMe M.2 เร็วแรง! อัปเกรดคอมฯ ให้สุดคุ้ม' /&gt;" Url="https://www.advice.co.th/product/ssd-solid-state-drive-/ssd-m-2-pcie-nvme-1-tb/1-tb-ssd-m-2-pcie-4-0-wd-black-sn7100-wds100t4x0e-nvme-m-2-2280" Version="V3">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+    <ui:BuildDataTable DataTable="[dt_Report]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="520,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;หมวดหมู่&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ชื่อสินค้า&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ราคา_x0020_IHAVECPU&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ราคา_x0020_JIB&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ราคา_x0020_ADVICE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;SSD&quot;, &quot;WD BLACK SN7100 1TB&quot;, Price_Ihavecpu, Price_Jib, Price_Advice}]" DataTable="[dt_Report]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="520,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+    <ui:WriteRange DataTable="[dt_Report]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="520,278.4" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPathResource="[LocalResource.FromPath(&quot;C:\Users\Admin\Downloads\IT_Price_Report.xlsx&quot;)]" />
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" Attachments="[{LocalResource.FromPath(&quot;C:\Users\Admin\Downloads\IT_Price_Report.xlsx&quot;)}]" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;เรียน ผู้บริหาร&#xA;&#xA;ระบบ RPA ได้ทำการดึงข้อมูลราคาและเปรียบเทียบเรียบร้อยแล้ว รายละเอียดตามไฟล์แนบครับ&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="56f06336-5732-42fe-9a93-5846dcac413e" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="520,504" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="รายงานเปรียบเทียบราคาอุปกรณ์ IT จาก 3 ร้าน" To="[New String(){&quot;giant59168g@gmail.com&quot;}]" UseConnectionService="True">
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+    </uga:SendEmailConnections>
+  </Sequence>
+</Activity>
